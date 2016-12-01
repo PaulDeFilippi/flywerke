@@ -12,6 +12,10 @@
 		4F5100DA1DEBBCC400AF3486 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5100D81DEBBCC400AF3486 /* Main.storyboard */; };
 		4F5100DC1DEBBCC400AF3486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5100DB1DEBBCC400AF3486 /* Assets.xcassets */; };
 		4F5100DF1DEBBCC400AF3486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5100DD1DEBBCC400AF3486 /* LaunchScreen.storyboard */; };
+		4F5100E71DEBBD0900AF3486 /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5100E61DEBBD0900AF3486 /* SplashScreenVC.swift */; };
+		4F5100E91DEBBDB100AF3486 /* twitterLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5100E81DEBBDB100AF3486 /* twitterLogo.png */; };
+		4F5100EB1DEFD42500AF3486 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F5100EA1DEFD42500AF3486 /* GoogleService-Info.plist */; };
+		AA7A5F4AAF02E99E3BDF45E4 /* Pods_flywerke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF6079EA62B5D62713AC8C1 /* Pods_flywerke.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,12 @@
 		4F5100DB1DEBBCC400AF3486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F5100DE1DEBBCC400AF3486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F5100E01DEBBCC400AF3486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F5100E61DEBBD0900AF3486 /* SplashScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
+		4F5100E81DEBBDB100AF3486 /* twitterLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterLogo.png; sourceTree = "<group>"; };
+		4F5100EA1DEFD42500AF3486 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		945E6F5C586626E4C8E24CAA /* Pods-flywerke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flywerke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flywerke/Pods-flywerke.debug.xcconfig"; sourceTree = "<group>"; };
+		A573281DCF7231F4950F5C76 /* Pods-flywerke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flywerke.release.xcconfig"; path = "Pods/Target Support Files/Pods-flywerke/Pods-flywerke.release.xcconfig"; sourceTree = "<group>"; };
+		BFF6079EA62B5D62713AC8C1 /* Pods_flywerke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flywerke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7A5F4AAF02E99E3BDF45E4 /* Pods_flywerke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30256948015BB78C647A6BDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				945E6F5C586626E4C8E24CAA /* Pods-flywerke.debug.xcconfig */,
+				A573281DCF7231F4950F5C76 /* Pods-flywerke.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4F5100C81DEBBCC400AF3486 = {
 			isa = PBXGroup;
 			children = (
 				4F5100D31DEBBCC400AF3486 /* flywerke */,
 				4F5100D21DEBBCC400AF3486 /* Products */,
+				30256948015BB78C647A6BDD /* Pods */,
+				5CAFCD57E97D18A65A4FBA7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +76,25 @@
 		4F5100D31DEBBCC400AF3486 /* flywerke */ = {
 			isa = PBXGroup;
 			children = (
+				4F5100E81DEBBDB100AF3486 /* twitterLogo.png */,
 				4F5100D41DEBBCC400AF3486 /* AppDelegate.swift */,
 				4F5100D61DEBBCC400AF3486 /* ViewController.swift */,
 				4F5100D81DEBBCC400AF3486 /* Main.storyboard */,
 				4F5100DB1DEBBCC400AF3486 /* Assets.xcassets */,
 				4F5100DD1DEBBCC400AF3486 /* LaunchScreen.storyboard */,
 				4F5100E01DEBBCC400AF3486 /* Info.plist */,
+				4F5100EA1DEFD42500AF3486 /* GoogleService-Info.plist */,
+				4F5100E61DEBBD0900AF3486 /* SplashScreenVC.swift */,
 			);
 			path = flywerke;
+			sourceTree = "<group>";
+		};
+		5CAFCD57E97D18A65A4FBA7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFF6079EA62B5D62713AC8C1 /* Pods_flywerke.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F5100E31DEBBCC400AF3486 /* Build configuration list for PBXNativeTarget "flywerke" */;
 			buildPhases = (
+				A0D4E67D31943518ECBE349F /* [CP] Check Pods Manifest.lock */,
 				4F5100CD1DEBBCC400AF3486 /* Sources */,
 				4F5100CE1DEBBCC400AF3486 /* Frameworks */,
 				4F5100CF1DEBBCC400AF3486 /* Resources */,
+				585EAC6E9A0BF6D8C121FA77 /* [CP] Embed Pods Frameworks */,
+				12FEB42DE9BC09825BC924A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,17 +162,68 @@
 			files = (
 				4F5100DF1DEBBCC400AF3486 /* LaunchScreen.storyboard in Resources */,
 				4F5100DC1DEBBCC400AF3486 /* Assets.xcassets in Resources */,
+				4F5100EB1DEFD42500AF3486 /* GoogleService-Info.plist in Resources */,
+				4F5100E91DEBBDB100AF3486 /* twitterLogo.png in Resources */,
 				4F5100DA1DEBBCC400AF3486 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12FEB42DE9BC09825BC924A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flywerke/Pods-flywerke-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		585EAC6E9A0BF6D8C121FA77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flywerke/Pods-flywerke-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0D4E67D31943518ECBE349F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4F5100CD1DEBBCC400AF3486 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5100E71DEBBD0900AF3486 /* SplashScreenVC.swift in Sources */,
 				4F5100D71DEBBCC400AF3486 /* ViewController.swift in Sources */,
 				4F5100D51DEBBCC400AF3486 /* AppDelegate.swift in Sources */,
 			);
@@ -259,6 +346,7 @@
 		};
 		4F5100E41DEBBCC400AF3486 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 945E6F5C586626E4C8E24CAA /* Pods-flywerke.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V7Q65FMKJ4;
@@ -272,6 +360,7 @@
 		};
 		4F5100E51DEBBCC400AF3486 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A573281DCF7231F4950F5C76 /* Pods-flywerke.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V7Q65FMKJ4;
@@ -302,6 +391,7 @@
 				4F5100E51DEBBCC400AF3486 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

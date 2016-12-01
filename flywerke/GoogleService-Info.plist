@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>933823386272-bceru78sditlbq6sf9501qbn2rarqg3h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.933823386272-bceru78sditlbq6sf9501qbn2rarqg3h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAPg3J_ILDDHTGMPo2Mk-Hn5G0jsouYS8M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>933823386272</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Paul-DeFilippi.flywerke</string>
+	<key>PROJECT_ID</key>
+	<string>flywerke</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flywerke.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:933823386272:ios:abb6e748f259a13f</string>
+	<key>DATABASE_URL</key>
+	<string>https://flywerke.firebaseio.com</string>
+</dict>
+</plist>
