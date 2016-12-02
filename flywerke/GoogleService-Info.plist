@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>933823386272-bceru78sditlbq6sf9501qbn2rarqg3h.apps.googleusercontent.com</string>
+	<string>484141206389-ile2v6ck9inig8v5tdnahavr8ouukelu.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.933823386272-bceru78sditlbq6sf9501qbn2rarqg3h</string>
+	<string>com.googleusercontent.apps.484141206389-ile2v6ck9inig8v5tdnahavr8ouukelu</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAPg3J_ILDDHTGMPo2Mk-Hn5G0jsouYS8M</string>
+	<string>AIzaSyCYZ0qAO2MfIsHybG0A0YOZN__XdjFh9iw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>933823386272</string>
+	<string>484141206389</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Paul-DeFilippi.flywerke</string>
 	<key>PROJECT_ID</key>
-	<string>flywerke</string>
+	<string>flywerke2</string>
 	<key>STORAGE_BUCKET</key>
-	<string>flywerke.appspot.com</string>
+	<string>flywerke2.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:933823386272:ios:abb6e748f259a13f</string>
+	<string>1:484141206389:ios:abb6e748f259a13f</string>
 	<key>DATABASE_URL</key>
-	<string>https://flywerke.firebaseio.com</string>
+	<string>https://flywerke2.firebaseio.com</string>
 </dict>
 </plist>
