@@ -15,6 +15,11 @@
 		4F5100E71DEBBD0900AF3486 /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5100E61DEBBD0900AF3486 /* SplashScreenVC.swift */; };
 		4F5100E91DEBBDB100AF3486 /* twitterLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5100E81DEBBDB100AF3486 /* twitterLogo.png */; };
 		4F5100EB1DEFD42500AF3486 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F5100EA1DEFD42500AF3486 /* GoogleService-Info.plist */; };
+		4F5100ED1DEFE5AA00AF3486 /* TwitterLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5100EC1DEFE5AA00AF3486 /* TwitterLoginVC.swift */; };
+		4F7689291DF1155D00AEFC45 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7689251DF1155D00AEFC45 /* Fabric.framework */; };
+		4F76892A1DF1155D00AEFC45 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7689261DF1155D00AEFC45 /* TwitterKit.framework */; };
+		4F76892B1DF1155D00AEFC45 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F7689271DF1155D00AEFC45 /* TwitterKitResources.bundle */; };
+		4F76892C1DF1155D00AEFC45 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7689281DF1155D00AEFC45 /* TwitterCore.framework */; };
 		AA7A5F4AAF02E99E3BDF45E4 /* Pods_flywerke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF6079EA62B5D62713AC8C1 /* Pods_flywerke.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +34,11 @@
 		4F5100E61DEBBD0900AF3486 /* SplashScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
 		4F5100E81DEBBDB100AF3486 /* twitterLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterLogo.png; sourceTree = "<group>"; };
 		4F5100EA1DEFD42500AF3486 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4F5100EC1DEFE5AA00AF3486 /* TwitterLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLoginVC.swift; sourceTree = "<group>"; };
+		4F7689251DF1155D00AEFC45 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		4F7689261DF1155D00AEFC45 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		4F7689271DF1155D00AEFC45 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
+		4F7689281DF1155D00AEFC45 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		945E6F5C586626E4C8E24CAA /* Pods-flywerke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flywerke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flywerke/Pods-flywerke.debug.xcconfig"; sourceTree = "<group>"; };
 		A573281DCF7231F4950F5C76 /* Pods-flywerke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flywerke.release.xcconfig"; path = "Pods/Target Support Files/Pods-flywerke/Pods-flywerke.release.xcconfig"; sourceTree = "<group>"; };
 		BFF6079EA62B5D62713AC8C1 /* Pods_flywerke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flywerke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +50,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA7A5F4AAF02E99E3BDF45E4 /* Pods_flywerke.framework in Frameworks */,
+				4F76892C1DF1155D00AEFC45 /* TwitterCore.framework in Frameworks */,
+				4F7689291DF1155D00AEFC45 /* Fabric.framework in Frameworks */,
+				4F76892A1DF1155D00AEFC45 /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +98,11 @@
 				4F5100E01DEBBCC400AF3486 /* Info.plist */,
 				4F5100EA1DEFD42500AF3486 /* GoogleService-Info.plist */,
 				4F5100E61DEBBD0900AF3486 /* SplashScreenVC.swift */,
+				4F5100EC1DEFE5AA00AF3486 /* TwitterLoginVC.swift */,
+				4F7689251DF1155D00AEFC45 /* Fabric.framework */,
+				4F7689261DF1155D00AEFC45 /* TwitterKit.framework */,
+				4F7689271DF1155D00AEFC45 /* TwitterKitResources.bundle */,
+				4F7689281DF1155D00AEFC45 /* TwitterCore.framework */,
 			);
 			path = flywerke;
 			sourceTree = "<group>";
@@ -110,6 +128,7 @@
 				4F5100CF1DEBBCC400AF3486 /* Resources */,
 				585EAC6E9A0BF6D8C121FA77 /* [CP] Embed Pods Frameworks */,
 				12FEB42DE9BC09825BC924A5 /* [CP] Copy Pods Resources */,
+				4F5100EE1DF10F8E00AF3486 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -164,6 +183,7 @@
 				4F5100DC1DEBBCC400AF3486 /* Assets.xcassets in Resources */,
 				4F5100EB1DEFD42500AF3486 /* GoogleService-Info.plist in Resources */,
 				4F5100E91DEBBDB100AF3486 /* twitterLogo.png in Resources */,
+				4F76892B1DF1155D00AEFC45 /* TwitterKitResources.bundle in Resources */,
 				4F5100DA1DEBBCC400AF3486 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +205,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flywerke/Pods-flywerke-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4F5100EE1DF10F8E00AF3486 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run dde2f504ab65c1bc96ba0b9bf0610548ddd2d2b7 19571574b751c624418a44ab6969cc744dd997955e5f0c7eb0cd742f3c701613";
 		};
 		585EAC6E9A0BF6D8C121FA77 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -223,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5100ED1DEFE5AA00AF3486 /* TwitterLoginVC.swift in Sources */,
 				4F5100E71DEBBD0900AF3486 /* SplashScreenVC.swift in Sources */,
 				4F5100D71DEBBCC400AF3486 /* ViewController.swift in Sources */,
 				4F5100D51DEBBCC400AF3486 /* AppDelegate.swift in Sources */,
@@ -350,6 +384,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V7Q65FMKJ4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/flywerke",
+				);
 				INFOPLIST_FILE = flywerke/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Paul-DeFilippi.flywerke";
@@ -364,6 +402,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V7Q65FMKJ4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/flywerke",
+				);
 				INFOPLIST_FILE = flywerke/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Paul-DeFilippi.flywerke";
