@@ -14,6 +14,7 @@ import TwitterKit
 class TwitterLoginVC: UIViewController {
     
     var twitterLoginBtn: TWTRLogInButton?
+    var userInfo: NSDictionary?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,14 +45,31 @@ class TwitterLoginVC: UIViewController {
             
             if error == nil {
                 print("\(user!.displayName!) successfully logged in")
-                self.performSegue(withIdentifier: "goToTweets", sender: self)
+                self.getCurrentUserInfo(user: user!)
             } else {
                 print(error?.localizedDescription as Any)
             }
         }
     }
     
+    func getCurrentUserInfo(user:FIRUser) {
+        
+        let name = user.displayName
+        let photoUrl = user.photoURL
+        
+        self.userInfo = ["name": name!, "avatar": "\(photoUrl)"]
+        
+        self.performSegue(withIdentifier: "goToTweets", sender: self)
+        
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "goToTweets") {
+            let tweetsVC = segue.destination as! TweetsVC
+            tweetsVC.userInfo = self.userInfo
+        }
         
     }
 
