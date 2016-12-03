@@ -11,6 +11,7 @@ import UIKit
 class TypeTweetVC: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var tweetTextView: UITextView!
+    var numberCharactersLeft: UIBarButtonItem = UIBarButtonItem()
     
     @IBAction func closeAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -39,8 +40,10 @@ class TypeTweetVC: UIViewController, UITextViewDelegate {
         let spaceBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         // other control buttons
+        numberCharactersLeft = UIBarButtonItem(title: "140", style: .plain, target: nil, action: nil)
+        numberCharactersLeft.tintColor = UIColor(red: 85 / 255.0, green: 172 / 255.0, blue: 238 / 255.0, alpha: 1.0)
         
-        toolbar.setItems([cancelBtn, spaceBtn, doneBtn], animated: false)
+        toolbar.setItems([cancelBtn, spaceBtn, numberCharactersLeft, doneBtn], animated: false)
         
         toolbar.isUserInteractionEnabled = true
         toolbar.sizeToFit()
@@ -67,11 +70,19 @@ class TypeTweetVC: UIViewController, UITextViewDelegate {
     // MARK: - UITextViewDelegate methods
     
     func textViewDidChange(_ textView: UITextView) {
-        print(textView.text)
+        //print(textView.text)
+        //print("number of characters left = \(140 - tweetText.length)")
         
         let tweetText = textView.text! as NSString
         
-        print("number of characters left = \(140 - tweetText.length)")
+        numberCharactersLeft.title = "\(140 - tweetText.length)"
+        
+        if tweetText.length > 140 {
+            numberCharactersLeft.tintColor = UIColor.red
+        } else {
+            numberCharactersLeft.tintColor = UIColor(red: 85 / 255.0, green: 172 / 255.0, blue: 238 / 255.0, alpha: 1.0)
+        }
+        
     }
     
     
