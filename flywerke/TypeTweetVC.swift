@@ -10,6 +10,14 @@ import UIKit
 
 class TypeTweetVC: UIViewController {
 
+    @IBOutlet weak var tweetTextView: UITextView!
+    
+    
+    
+    @IBAction func closeAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

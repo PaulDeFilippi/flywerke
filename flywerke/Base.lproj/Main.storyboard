@@ -106,22 +106,41 @@
                                 <items>
                                     <navigationItem title="What's happening ?" id="HN7-L0-i7z">
                                         <barButtonItem key="leftBarButtonItem" image="avatar.png" id="Lqb-To-emj"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="LAD-vM-9EJ"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="LAD-vM-9EJ">
+                                            <connections>
+                                                <action selector="closeAction:" destination="3c1-sj-AEV" id="v7B-O3-sIZ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Saf-CK-VDS">
+                                <rect key="frame" x="0.0" y="60" width="375" height="275"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="N8G-Le-gRZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zDn-mi-ID4" firstAttribute="leading" secondItem="XWf-Aq-bCq" secondAttribute="leading" id="DNs-sp-ah9"/>
                             <constraint firstItem="zDn-mi-ID4" firstAttribute="top" secondItem="XWf-Aq-bCq" secondAttribute="top" id="MKr-h4-CRL"/>
+                            <constraint firstItem="Saf-CK-VDS" firstAttribute="top" secondItem="zDn-mi-ID4" secondAttribute="bottom" id="SGH-z9-c3g"/>
                             <constraint firstAttribute="trailing" secondItem="zDn-mi-ID4" secondAttribute="trailing" id="c6t-rF-iuw"/>
+                            <constraint firstItem="Saf-CK-VDS" firstAttribute="leading" secondItem="XWf-Aq-bCq" secondAttribute="leading" id="gqn-JS-T4M"/>
+                            <constraint firstAttribute="trailing" secondItem="Saf-CK-VDS" secondAttribute="trailing" id="nZ6-3q-mJh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tweetTextView" destination="Saf-CK-VDS" id="0Qi-Gz-DOv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UfJ-Te-72q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2519" y="861"/>
+            <point key="canvasLocation" x="2517.5999999999999" y="859.52023988005999"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vCq-tM-xea">
