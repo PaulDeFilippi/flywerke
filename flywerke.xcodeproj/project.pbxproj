@@ -21,6 +21,8 @@
 		4F76892C1DF1155D00AEFC45 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7689281DF1155D00AEFC45 /* TwitterCore.framework */; };
 		4F76892E1DF12F4C00AEFC45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F76892D1DF12F4C00AEFC45 /* GoogleService-Info.plist */; };
 		4F7689331DF2135800AEFC45 /* TweetsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7689321DF2135800AEFC45 /* TweetsVC.swift */; };
+		4F7689361DF25AAE00AEFC45 /* TypeTweetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7689351DF25AAE00AEFC45 /* TypeTweetVC.swift */; };
+		4F7689381DF25D1D00AEFC45 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F7689371DF25D1D00AEFC45 /* avatar.png */; };
 		AA7A5F4AAF02E99E3BDF45E4 /* Pods_flywerke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF6079EA62B5D62713AC8C1 /* Pods_flywerke.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		4F76892D1DF12F4C00AEFC45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F76892F1DF1345500AEFC45 /* flywerke.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = flywerke.entitlements; sourceTree = "<group>"; };
 		4F7689321DF2135800AEFC45 /* TweetsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsVC.swift; sourceTree = "<group>"; };
+		4F7689351DF25AAE00AEFC45 /* TypeTweetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTweetVC.swift; sourceTree = "<group>"; };
+		4F7689371DF25D1D00AEFC45 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		945E6F5C586626E4C8E24CAA /* Pods-flywerke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flywerke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flywerke/Pods-flywerke.debug.xcconfig"; sourceTree = "<group>"; };
 		A573281DCF7231F4950F5C76 /* Pods-flywerke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flywerke.release.xcconfig"; path = "Pods/Target Support Files/Pods-flywerke/Pods-flywerke.release.xcconfig"; sourceTree = "<group>"; };
 		BFF6079EA62B5D62713AC8C1 /* Pods_flywerke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flywerke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,7 @@
 				4F76892F1DF1345500AEFC45 /* flywerke.entitlements */,
 				4F5100E81DEBBDB100AF3486 /* twitterLogo.png */,
 				4F5100D41DEBBCC400AF3486 /* AppDelegate.swift */,
+				4F7689371DF25D1D00AEFC45 /* avatar.png */,
 				4F5100D81DEBBCC400AF3486 /* Main.storyboard */,
 				4F5100DB1DEBBCC400AF3486 /* Assets.xcassets */,
 				4F5100DD1DEBBCC400AF3486 /* LaunchScreen.storyboard */,
@@ -116,6 +121,7 @@
 				4F5100E61DEBBD0900AF3486 /* SplashScreenVC.swift */,
 				4F7689321DF2135800AEFC45 /* TweetsVC.swift */,
 				4F5100D61DEBBCC400AF3486 /* ViewController.swift */,
+				4F7689351DF25AAE00AEFC45 /* TypeTweetVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F5100DF1DEBBCC400AF3486 /* LaunchScreen.storyboard in Resources */,
+				4F7689381DF25D1D00AEFC45 /* avatar.png in Resources */,
 				4F5100DC1DEBBCC400AF3486 /* Assets.xcassets in Resources */,
 				4F5100E91DEBBDB100AF3486 /* twitterLogo.png in Resources */,
 				4F76892B1DF1155D00AEFC45 /* TwitterKitResources.bundle in Resources */,
@@ -276,6 +283,7 @@
 			files = (
 				4F5100ED1DEFE5AA00AF3486 /* TwitterLoginVC.swift in Sources */,
 				4F7689331DF2135800AEFC45 /* TweetsVC.swift in Sources */,
+				4F7689361DF25AAE00AEFC45 /* TypeTweetVC.swift in Sources */,
 				4F5100E71DEBBD0900AF3486 /* SplashScreenVC.swift in Sources */,
 				4F5100D71DEBBCC400AF3486 /* ViewController.swift in Sources */,
 				4F5100D51DEBBCC400AF3486 /* AppDelegate.swift in Sources */,

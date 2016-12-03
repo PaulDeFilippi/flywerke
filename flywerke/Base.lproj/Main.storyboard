@@ -74,10 +74,54 @@
                             <outlet property="delegate" destination="WBB-aF-Pvv" id="i8a-8p-Eed"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="BbB-Qo-F0D">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="aol-xf-asA">
+                            <connections>
+                                <segue destination="3c1-sj-AEV" kind="presentation" identifier="writeTweet" id="Mz3-m9-6xy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DI-3R-zEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1780" y="862.21889055472275"/>
+        </scene>
+        <!--Type TweetVC-->
+        <scene sceneID="OGA-3B-bNQ">
+            <objects>
+                <viewController id="3c1-sj-AEV" customClass="TypeTweetVC" customModule="flywerke" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cYF-IL-3cF"/>
+                        <viewControllerLayoutGuide type="bottom" id="QNK-jf-WL8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XWf-Aq-bCq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDn-mi-ID4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="zZC-nf-oi8"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="What's happening ?" id="HN7-L0-i7z">
+                                        <barButtonItem key="leftBarButtonItem" image="avatar.png" id="Lqb-To-emj"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="LAD-vM-9EJ"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zDn-mi-ID4" firstAttribute="leading" secondItem="XWf-Aq-bCq" secondAttribute="leading" id="DNs-sp-ah9"/>
+                            <constraint firstItem="zDn-mi-ID4" firstAttribute="top" secondItem="XWf-Aq-bCq" secondAttribute="top" id="MKr-h4-CRL"/>
+                            <constraint firstAttribute="trailing" secondItem="zDn-mi-ID4" secondAttribute="trailing" id="c6t-rF-iuw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UfJ-Te-72q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2519" y="861"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vCq-tM-xea">
@@ -98,4 +142,7 @@
             <point key="canvasLocation" x="32.799999999999997" y="860.41979010494754"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatar.png" width="30" height="30"/>
+    </resources>
 </document>
