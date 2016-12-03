@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TypeTweetVC: UIViewController {
+class TypeTweetVC: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var tweetTextView: UITextView!
     
@@ -18,6 +18,9 @@ class TypeTweetVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tweetTextView.delegate = self
+        tweetTextView.becomeFirstResponder()
         
         addToolBar(textView: tweetTextView)
 
@@ -47,6 +50,8 @@ class TypeTweetVC: UIViewController {
         
     }
     
+    
+    
     func doneAction() {
         print("done")
     }
@@ -57,6 +62,16 @@ class TypeTweetVC: UIViewController {
 
     func sendTweetAction() {
         print("tweet sent!")
+    }
+    
+    // MARK: - UITextViewDelegate methods
+    
+    func textViewDidChange(_ textView: UITextView) {
+        print(textView.text)
+        
+        let tweetText = textView.text! as NSString
+        
+        print("number of characters left = \(140 - tweetText.length)")
     }
     
     
