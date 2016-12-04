@@ -12,6 +12,8 @@ class TypeTweetVC: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var tweetTextView: UITextView!
     var numberCharactersLeft: UIBarButtonItem = UIBarButtonItem()
+    var tweetBarBtnItem: UIBarButtonItem?
+    var tweetBtn: UIButton?
     
     @IBAction func closeAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -43,7 +45,9 @@ class TypeTweetVC: UIViewController, UITextViewDelegate {
         numberCharactersLeft = UIBarButtonItem(title: "140", style: .plain, target: nil, action: nil)
         numberCharactersLeft.tintColor = UIColor(red: 85 / 255.0, green: 172 / 255.0, blue: 238 / 255.0, alpha: 1.0)
         
-        toolbar.setItems([cancelBtn, spaceBtn, numberCharactersLeft, doneBtn], animated: false)
+        tweetBarBtnItem = UIBarButtonItem(customView: addTweetBtn())
+        
+        toolbar.setItems([cancelBtn, spaceBtn, numberCharactersLeft, tweetBarBtnItem!, doneBtn], animated: false)
         
         toolbar.isUserInteractionEnabled = true
         toolbar.sizeToFit()
@@ -64,7 +68,38 @@ class TypeTweetVC: UIViewController, UITextViewDelegate {
     }
 
     func sendTweetAction() {
-        print("tweet sent!")
+        print(tweetTextView!.text!)
+    }
+    
+    func addTweetBtn() -> UIView {
+        
+        tweetBtn = UIButton(type: UIButtonType.custom)
+        tweetBtn!.frame = CGRect(x: 0, y: 0, width: 60, height: 30)
+        tweetBtn!.setTitle("tweet", for: .normal)
+        tweetBtn?.setTitleColor(UIColor.gray, for: .highlighted)
+        tweetBtn!.titleLabel?.font = UIFont(name: "Arial", size: 14)
+        
+        tweetBtn!.addTarget(self, action: #selector(TypeTweetVC.sendTweetAction), for: .touchUpInside)
+        
+        tweetBtn!.layer.cornerRadius = 3
+        tweetBtn!.clipsToBounds = true
+        
+        enableTweetBtn(btn: tweetBtn!, enabled: false)
+        
+        return tweetBtn!
+    }
+    
+    func enableTweetBtn(btn: UIButton, enabled: Bool) {
+        
+        if enabled {
+            btn.backgroundColor = UIColor(red: 85 / 255.0, green: 172 / 255.0, blue: 238 / 255.0, alpha: 1.0)
+            btn.tintColor = UIColor.white
+            btn.isEnabled = true
+        } else {
+            btn.backgroundColor = UIColor.clear
+            btn.tintColor = UIColor.darkGray
+            btn.isEnabled = false
+        }
     }
     
     // MARK: - UITextViewDelegate methods
@@ -79,8 +114,15 @@ class TypeTweetVC: UIViewController, UITextViewDelegate {
         
         if tweetText.length > 140 {
             numberCharactersLeft.tintColor = UIColor.red
+            enableTweetBtn(btn: tweetBtn!, enabled: false)
         } else {
             numberCharactersLeft.tintColor = UIColor(red: 85 / 255.0, green: 172 / 255.0, blue: 238 / 255.0, alpha: 1.0)
+        }
+        
+        if textView.text == ""  || tweetText.length > 140 {
+            enableTweetBtn(btn: tweetBtn!, enabled: false)
+        } else {
+            enableTweetBtn(btn: tweetBtn!, enabled: true)
         }
         
     }
