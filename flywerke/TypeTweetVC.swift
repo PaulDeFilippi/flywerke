@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class TypeTweetVC: UIViewController, UITextViewDelegate {
 
@@ -14,6 +16,10 @@ class TypeTweetVC: UIViewController, UITextViewDelegate {
     var numberCharactersLeft: UIBarButtonItem = UIBarButtonItem()
     var tweetBarBtnItem: UIBarButtonItem?
     var tweetBtn: UIButton?
+    
+    // FIrebase
+    let ref = FIRDatabase.database().reference()
+    var tweetsRef: FIRDatabaseReference?
     
     @IBAction func closeAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -26,6 +32,9 @@ class TypeTweetVC: UIViewController, UITextViewDelegate {
         tweetTextView.becomeFirstResponder()
         
         addToolBar(textView: tweetTextView)
+        
+        // Firebase
+        tweetsRef = ref.child("tweets")
 
     }
     
@@ -68,7 +77,17 @@ class TypeTweetVC: UIViewController, UITextViewDelegate {
     }
 
     func sendTweetAction() {
-        print(tweetTextView!.text!)
+        
+        print("tweet sent")
+        
+        let tweet = tweetTextView!.text!
+        let date = Date()
+        let tweetRef: FIRDatabaseReference = tweetsRef!.child("\(date)")
+        
+        let tweetDict: NSDictionary = ["tweet": tweet, "date": "\(date)"]
+        tweetRef.setValue(tweetDict)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     func addTweetBtn() -> UIView {
