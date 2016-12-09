@@ -81,10 +81,10 @@ class TypeTweetVC: UIViewController, UITextViewDelegate {
         print("tweet sent")
         
         let tweet = tweetTextView!.text!
-        let date = Date()
+        let date = displayDate()
         let tweetRef: FIRDatabaseReference = tweetsRef!.child("\(date)")
         
-        let tweetDict: NSDictionary = ["tweet": tweet, "date": "\(date)"]
+        let tweetDict: NSDictionary = ["tweet": tweet, "date": date]
         tweetRef.setValue(tweetDict)
         
         dismiss(animated: true, completion: nil)
@@ -146,14 +146,22 @@ class TypeTweetVC: UIViewController, UITextViewDelegate {
         
     }
     
-    
-    
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func displayDate() -> String {
+        
+        let currentDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .short
+        
+        return formatter.string(from: currentDate)
     }
+    
+    
+    
+    
+    
+    
+
     
 
     /*
