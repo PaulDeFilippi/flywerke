@@ -13,6 +13,7 @@ import FirebaseDatabase
 class TweetsVC: UITableViewController {
 
     var userInfo: NSDictionary?
+    var tweets:[Tweet] = [Tweet]()
     
     // FIrebase
     let ref = FIRDatabase.database().reference()
@@ -23,7 +24,12 @@ class TweetsVC: UITableViewController {
 
         self.title = "Hello \(userInfo!["name"]!)"
         
+        // Firebase
         tweetsRef = ref.child("tweets")
+        queryFirebase { (array) in
+            self.tweets = array as! [Tweet]
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,22 +46,27 @@ class TweetsVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return tweets.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
+        
+        let tweet = tweets[indexPath.row]
 
         // Configure the cell...
-        cell.backgroundColor = UIColor(red: 85 / 255.0, green: 172 / 255.0, blue: 238 / 255.0, alpha: CGFloat(indexPath.row) / 10)
+        cell.textLabel?.text = tweet.date
+        cell.detailTextLabel?.text = tweet.text
 
         return cell
     }
     
     // MARK - Firebase
     
-    func queryFirebase(_ completion:(_ tweetsArray: NSArray) -> ()) {
+    func queryFirebase(_ completion:@escaping (_ tweetsArray: NSArray) -> ()) {
+        
+        var array : [Tweet] = [Tweet]()
         
         tweetsRef?.observe(.value, with: { (snapshot) in
             
@@ -66,13 +77,18 @@ class TweetsVC: UITableViewController {
                 if let tweetsDict = dict as? NSDictionary {
                     
                     for tweet in tweetsDict {
-                        let tweetItem = tweet as! NSDictionary
+                        let tweetItem = tweet.value as! NSDictionary
                         
                         let tweetTxt = tweetItem["tweet"] as! String
                         let tweetDate = tweetItem["date"] as! String
-                    }
-                }
-            }
+                        
+                        let newItem = Tweet(text: tweetTxt, date: tweetDate)
+                        
+                        array.append(newItem)
+                    } // for
+                } // if
+            } // if
+            completion(array as NSArray)
         })
     }
     
