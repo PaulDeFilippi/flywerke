@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class TweetsVC: UITableViewController {
 
     var userInfo: NSDictionary?
     
+    // FIrebase
+    let ref = FIRDatabase.database().reference()
+    var tweetsRef: FIRDatabaseReference?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Hello \(userInfo!["name"]!)"
+        
+        tweetsRef = ref.child("tweets")
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +51,29 @@ class TweetsVC: UITableViewController {
         cell.backgroundColor = UIColor(red: 85 / 255.0, green: 172 / 255.0, blue: 238 / 255.0, alpha: CGFloat(indexPath.row) / 10)
 
         return cell
+    }
+    
+    // MARK - Firebase
+    
+    func queryFirebase(_ completion:(_ tweetsArray: NSArray) -> ()) {
+        
+        tweetsRef?.observe(.value, with: { (snapshot) in
+            
+            let item = snapshot as FIRDataSnapshot
+            
+            if let dict = item.value as? NSDictionary {
+                
+                if let tweetsDict = dict as? NSDictionary {
+                    
+                    for tweet in tweetsDict {
+                        let tweetItem = tweet as! NSDictionary
+                        
+                        let tweetTxt = tweetItem["tweet"] as! String
+                        let tweetDate = tweetItem["date"] as! String
+                    }
+                }
+            }
+        })
     }
     
 
